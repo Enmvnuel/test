@@ -1,2 +1,0 @@
-# README
-no read ne
