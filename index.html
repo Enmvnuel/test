@@ -1,15 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prueba — Feature ↔ Develop</title>
+    <style>
+        :root {
+            --bg1: #f8fafc;
+            /* very light */
+            --bg2: #eef2ff;
+            /* soft blue */
+            --card: #ffffff;
+            /* white cards */
+            --accent: #3b82f6;
+            /* blue accent */
+            --muted: #6b7280;
+            /* muted text */
+            --surface: rgba(15, 23, 42, 0.02);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            background: linear-gradient(135deg, var(--bg1), var(--bg2));
+            color: #0b1220;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+            text-align: center;
+            border: 1px solid var(--surface);
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.12), rgba(96, 165, 250, 0.08));
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            margin: 0 0 12px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, var(--accent), #60a5fa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin: 0 0 24px;
+        }
+
+        .merge-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            margin: 24px 0;
+        }
+
+        .branch {
+            width: 140px;
+            height: 80px;
+            border-radius: 10px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 12px;
+            color: #0b1220;
+            border: 1px solid rgba(15, 23, 42, 0.04);
+        }
+
+        .branch .label {
+            font-size: 0.9rem;
+            color: var(--muted)
+        }
+
+        .arrow {
+            font-size: 2rem;
+            transform: rotate(90deg);
+            color: var(--accent)
+        }
+
+        .hr {
+            height: 4px;
+            background: linear-gradient(90deg, #c7f9cc, #bfdbfe, #93c5fd);
+            border-radius: 2px;
+            margin: 18px 0;
+            animation: slide 4s linear infinite;
+            background-size: 200% 100%
+        }
+
+        @keyframes slide {
+            0% {
+                background-position: 0% 50%
+            }
+
+            100% {
+                background-position: 200% 50%
+            }
+        }
+
+        .card {
+            background: var(--card);
+            color: #0b1220;
+            padding: 20px;
+            border-radius: 12px;
+            display: inline-block;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            margin-top: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.04)
+        }
+
+        .small {
+            font-size: 0.95rem;
+            color: var(--muted)
+        }
+
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid rgba(15, 23, 42, 0.12);
+            animation: typing 3s steps(40, end), blink 600ms steps(40, end) infinite
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+
+        .footer {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 0.9rem
+        }
+
+        button.cta {
+            margin-top: 16px;
+            border: 0;
+            padding: 10px 16px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--accent), #06b6d4);
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.12);
+        }
+
+        button.cta:hover {
+            transform: translateY(-3px);
+            transition: transform .18s
+        }
+
+        @media (max-width:520px) {
+            .merge-visual {
+                flex-direction: column;
+            }
+
+            .branch {
+                width: 180px
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>FEATURE</h1>
-    <p>TEST</p>
+    <div class="container" role="main">
+        <div class="badge">Branch preview</div>
+        <h1>prueba rama feature merge con la rama develop</h1>
+        <p class="subtitle">Visualizando la fusión entre ramas con estilo.</p>
+
+        <div class="merge-visual" aria-hidden="true">
+            <div class="branch">
+                <strong>feature</strong>
+                <div class="small">cambios experimentales</div>
+            </div>
+            <div class="arrow">➜</div>
+            <div class="branch">
+                <strong>develop</strong>
+                <div class="small">rama principal de desarrollo</div>
+            </div>
+        </div>
+
+        <div class="hr" aria-hidden="true"></div>
+
+        <div class="card">
+            <div class="typewriter">prueba rama feature merge con la rama develop</div>
+        </div>
+
+        <div class="footer">
+            <button class="cta" id="toggle">Alternar efecto</button>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('toggle');
+        const tw = document.querySelector('.typewriter');
+        let running = true;
+        btn.addEventListener('click', () => {
+            running = !running;
+            if (!running) {
+                tw.style.animation = 'none';
+                btn.textContent = 'Reiniciar efecto';
+            } else {
+                // reinicia la animación
+                tw.style.animation = 'typing 3s steps(40, end), blink 600ms steps(40, end) infinite';
+                btn.textContent = 'Alternar efecto';
+            }
+        });
+    </script>
 </body>
 
 </html>
