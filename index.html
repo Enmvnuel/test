@@ -238,9 +238,7 @@
                 btn.textContent = 'Reiniciar efecto';
             } else {
                 // reinicia la animación
-                tw.style.animation = '';
-                void tw.offsetWidth; // reflow
-                tw.style.animation = '';
+                tw.style.animation = 'typing 3s steps(40, end), blink 600ms steps(40, end) infinite';
                 btn.textContent = 'Alternar efecto';
             }
         });
