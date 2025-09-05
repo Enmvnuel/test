@@ -226,6 +226,141 @@
             <button class="cta" id="toggle">Alternar efecto</button>
         </div>
     </div>
+    <section class="max-w-4xl mx-auto p-6 lg:p-12">
+    <header class="mb-8">
+      <h1 class="text-3xl font-extrabold">Preguntas frecuentes — HireGuard</h1>
+      <p class="mt-2 text-gray-600">Respuestas rápidas a las dudas más comunes sobre cómo HireGuard conecta a las personas con empresas.</p>
+    </header>
+
+    <div class="grid gap-6 lg:grid-cols-2">
+      <!-- Left: Short intro card -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border">
+        <h2 class="text-xl font-semibold">¿Qué es HireGuard?</h2>
+        <p class="mt-2 text-gray-600">HireGuard es una plataforma que evalúa habilidades, experiencia y rasgos profesionales para generar un puntaje ("hirescore") y conectar a candidatos con empresas que buscan perfiles compatibles.</p>
+
+        <dl class="mt-4 text-sm text-gray-700">
+          <dt class="font-medium">¿Gratis?</dt>
+          <dd class="mt-1">Registro y perfil básico gratuitos; hay planes premium para empresas y candidatos con funciones avanzadas.</dd>
+
+          <dt class="font-medium mt-3">Privacidad</dt>
+          <dd class="mt-1">Tus datos profesionales se comparten solo cuando tú autorizas aplicaciones o postulas a una oferta.</dd>
+        </dl>
+      </div>
+
+      <!-- Right: FAQ -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border">
+        <h2 class="text-xl font-semibold">Preguntas y respuestas</h2>
+
+        <div class="mt-4 space-y-3" id="faq-list">
+
+          <!-- FAQ item (para cada pregunta) -->
+          <div class="border rounded-lg overflow-hidden">
+            <button aria-expanded="false" class="faq-trigger flex items-center justify-between w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              <span class="font-medium">¿Cómo calcula HireGuard mi puntaje?</span>
+              <svg class="w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M6 8l4 4 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-content px-4 pb-4 text-gray-600 hidden" aria-hidden="true">
+              <p>Combinamos pruebas técnicas, evaluaciones de soft skills y hard skills, verificación de experiencia y feedback de terceros. El algoritmo normaliza cada componente para producir un puntaje comprensible que refleja ajuste técnico y cultural.</p>
+            </div>
+          </div>
+
+          <div class="border rounded-lg overflow-hidden">
+            <button aria-expanded="false" class="faq-trigger flex items-center justify-between w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              <span class="font-medium">¿Puedo controlar qué empresas ven mi información?</span>
+              <svg class="w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M6 8l4 4 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-content px-4 pb-4 text-gray-600 hidden" aria-hidden="true">
+              <p>Sí. En la configuración de privacidad puedes elegir: público, solo empresas verificadas, o privado hasta que aceptes compartirlo para una postulación específica.</p>
+            </div>
+          </div>
+
+          <div class="border rounded-lg overflow-hidden">
+            <button aria-expanded="false" class="faq-trigger flex items-center justify-between w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              <span class="font-medium">¿Cómo se integra HireGuard con las empresas?</span>
+              <svg class="w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M6 8l4 4 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-content px-4 pb-4 text-gray-600 hidden" aria-hidden="true">
+              <p>Ofrecemos APIs REST, integraciones con ATS populares (Greenhouse, Workable, etc.) y un panel donde las empresas pueden filtrar candidatos por hirescore, habilidades y disponibilidad.</p>
+            </div>
+          </div>
+
+          <div class="border rounded-lg overflow-hidden">
+            <button aria-expanded="false" class="faq-trigger flex items-center justify-between w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              <span class="font-medium">¿Cuál es la precisión del algoritmo?</span>
+              <svg class="w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M6 8l4 4 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-content px-4 pb-4 text-gray-600 hidden" aria-hidden="true">
+              <p>La precisión depende del volumen y la calidad de los datos. Usamos métricas de validación interna (precisión, recall) y feedback humano para mejorar continuamente. Ningún algoritmo es perfecto; recomendamos combinar hirescore con entrevistas y pruebas técnicas.</p>
+            </div>
+          </div>
+
+          <div class="border rounded-lg overflow-hidden">
+            <button aria-expanded="false" class="faq-trigger flex items-center justify-between w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              <span class="font-medium">¿Qué costos tiene para empresas y candidatos?</span>
+              <svg class="w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M6 8l4 4 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-content px-4 pb-4 text-gray-600 hidden" aria-hidden="true">
+              <p>Para candidatos el registro básico es gratuito. Las empresas pagan por planes según volumen de búsquedas y acceso a APIs; hay precios especiales para startups y ONGs.</p>
+            </div>
+          </div>
+
+          <div class="border rounded-lg overflow-hidden">
+            <button aria-expanded="false" class="faq-trigger flex items-center justify-between w-full p-4 text-left focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              <span class="font-medium">¿Cómo solicito soporte o reporto un error?</span>
+              <svg class="w-5 h-5 transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M6 8l4 4 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-content px-4 pb-4 text-gray-600 hidden" aria-hidden="true">
+              <p>Puedes contactar soporte desde el panel (Ayuda → Soporte) o enviar un correo a soporte@HireGuard.example. En la mayoría de los planes respondemos en menos de 48 horas.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Small call-to-action -->
+    <footer class="mt-8 text-center text-sm text-gray-600">
+      ¿No encontraste tu pregunta? <a href="#" class="text-indigo-600 hover:underline">Contáctanos</a> y la añadiremos.
+    </footer>
+  </section>
+
+  <script>
+    // Accordion behaviour: accessible, keyboard-friendly
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      const content = trigger.nextElementSibling;
+      const icon = trigger.querySelector('svg');
+
+      trigger.addEventListener('click', () => {
+        const expanded = trigger.getAttribute('aria-expanded') === 'true';
+        // close all
+        document.querySelectorAll('.faq-trigger').forEach(t => {
+          t.setAttribute('aria-expanded', 'false');
+          t.nextElementSibling.classList.add('hidden');
+          const svg = t.querySelector('svg'); svg.classList.remove('rotate-90');
+        });
+
+        if (!expanded) {
+          trigger.setAttribute('aria-expanded', 'true');
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-90');
+          content.setAttribute('aria-hidden', 'false');
+        } else {
+          trigger.setAttribute('aria-expanded', 'false');
+          content.classList.add('hidden');
+          icon.classList.remove('rotate-90');
+          content.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // keyboard support: Enter & Space
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          trigger.click();
+        }
+      });
+    });
+  </script>
 
     <script>
         const btn = document.getElementById('toggle');
