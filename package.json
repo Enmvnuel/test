@@ -1,5 +1,5 @@
 {
-  "name": "rsbuild-project",
+  "name": "rsbuild-project-bun",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -9,8 +9,12 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.5.2",
